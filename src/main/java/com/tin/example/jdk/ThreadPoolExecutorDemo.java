@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 /**
  * description: ThreadPoolExecutorDemo
  * <p>
+ * 测试位移运算
  *
  * @author tin on 2021/1/1 上午8:42
  */
