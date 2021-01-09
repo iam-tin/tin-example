@@ -2,7 +2,7 @@ package com.tin.example.others;
 
 /**
  * title: WhileTest
- * <p>
+ * <p> 测试while和finally
  * description:
  *
  * @author tin on 2021/1/2 下午2:47
