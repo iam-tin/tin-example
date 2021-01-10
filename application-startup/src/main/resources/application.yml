@@ -1,0 +1,15 @@
+# 基础配置文件
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+server:
+  port: 10088     # Springboot占用端口
+  servlet:
+    context-path: /tin   # 应用路径
+  tomcat:
+    uri-encoding: UTF-8
