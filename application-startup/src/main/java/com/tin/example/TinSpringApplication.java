@@ -13,10 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author tin @看点代码再上班 on 2021/1/10 下午2:08
  */
 @SpringBootApplication
-public class Main {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+public class TinSpringApplication {
+    private static final Logger LOGGER = LoggerFactory.getLogger(TinSpringApplication.class);
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(TinSpringApplication.class, args);
         LOGGER.info("容器启动成功... ");
     }
 }
