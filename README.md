@@ -12,3 +12,18 @@ iam-tin@看点代码再上班 的源码分析&amp;测试用例
 
 ## tin-basis
 其他的一些基础测试，一般包括jdk源码研读的测试用例
+### lang
+java.lang包测试
+
+### false.sharing包
+伪共享测试
+
+### jdk包
+#### threadpool 线程池测试
+
+### jit包
+即时编译测试
+
+### lock包
+Java锁
+
