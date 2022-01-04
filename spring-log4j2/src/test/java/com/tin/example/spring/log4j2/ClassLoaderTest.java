@@ -1,6 +1,7 @@
 package com.tin.example.spring.log4j2;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.net.URL;
 

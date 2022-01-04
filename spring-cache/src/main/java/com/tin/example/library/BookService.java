@@ -19,8 +19,7 @@ public class BookService extends AbstractLibraryService {
     @Autowired
     private BookStore bookStore;
 
-    @Override
-    public BookEntity findByBookName(String bookName) {
+    private BookEntity getBookEntity(String bookName) {
         //模拟查询耗时100毫秒
         sleep4Millis(100);
 
@@ -39,9 +38,14 @@ public class BookService extends AbstractLibraryService {
         return null;
     }
 
-    @Cacheable("library")
+    @Cacheable(value = "library", sync = true)
     @Override
     public BookEntity findByBookNameWithSpringCache(String bookName) {
-        return findByBookName(bookName);
+        return getBookEntity(bookName);
+    }
+
+    @Override
+    public BookEntity findByBookName(String bookName) {
+        return getBookEntity(bookName);
     }
 }

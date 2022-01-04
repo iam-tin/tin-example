@@ -20,7 +20,7 @@ public abstract class AbstractLibraryService {
     /**
      * sleep for millis
      */
-    public void sleep4Millis(long millis) {
+    public static void sleep4Millis(long millis) {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {

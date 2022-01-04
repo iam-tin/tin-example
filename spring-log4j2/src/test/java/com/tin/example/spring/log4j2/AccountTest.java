@@ -1,12 +1,10 @@
 package com.tin.example.spring.log4j2;
 
 import com.tin.example.TinSpringApplication;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * title: AccountTest
@@ -15,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
  *
  * @author tin @看点代码再上班 on 2021/1/12 下午11:39
  */
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = TinSpringApplication.class)
 public class AccountTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountTest.class);
