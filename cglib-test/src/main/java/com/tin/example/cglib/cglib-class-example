@@ -1,0 +1,770 @@
+package com.tin.example.cglib.design.pattern.employee;
+
+import com.tin.example.cglib.design.pattern.SexEnum;
+import com.tin.example.cglib.design.pattern.visitor.Visitor;
+import java.lang.reflect.Method;
+import net.sf.cglib.core.ReflectUtils;
+import net.sf.cglib.core.Signature;
+import net.sf.cglib.proxy.Callback;
+import net.sf.cglib.proxy.Factory;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+/* compiled from: <generated> */
+/* loaded from: Developer$$EnhancerByCGLIB$$d571375b.class */
+public class Developer$$EnhancerByCGLIB$$d571375b extends Developer implements Factory {
+    private boolean CGLIB$BOUND;
+    public static Object CGLIB$FACTORY_DATA;
+    private static final ThreadLocal CGLIB$THREAD_CALLBACKS = null;
+    private static final Callback[] CGLIB$STATIC_CALLBACKS = null;
+    private MethodInterceptor CGLIB$CALLBACK_0;
+    private static Object CGLIB$CALLBACK_FILTER;
+    private static final Method CGLIB$equals$0$Method = null;
+    private static final MethodProxy CGLIB$equals$0$Proxy = null;
+    private static final Object[] CGLIB$emptyArgs = null;
+    private static final Method CGLIB$toString$1$Method = null;
+    private static final MethodProxy CGLIB$toString$1$Proxy = null;
+    private static final Method CGLIB$hashCode$2$Method = null;
+    private static final MethodProxy CGLIB$hashCode$2$Proxy = null;
+    private static final Method CGLIB$accept$3$Method = null;
+    private static final MethodProxy CGLIB$accept$3$Proxy = null;
+    private static final Method CGLIB$print$4$Method = null;
+    private static final MethodProxy CGLIB$print$4$Proxy = null;
+    private static final Method CGLIB$setLines$5$Method = null;
+    private static final MethodProxy CGLIB$setLines$5$Proxy = null;
+    private static final Method CGLIB$canEqual$6$Method = null;
+    private static final MethodProxy CGLIB$canEqual$6$Proxy = null;
+    private static final Method CGLIB$mock$7$Method = null;
+    private static final MethodProxy CGLIB$mock$7$Proxy = null;
+    private static final Method CGLIB$mock2$8$Method = null;
+    private static final MethodProxy CGLIB$mock2$8$Proxy = null;
+    private static final Method CGLIB$getLines$9$Method = null;
+    private static final MethodProxy CGLIB$getLines$9$Proxy = null;
+    private static final Method CGLIB$getName$10$Method = null;
+    private static final MethodProxy CGLIB$getName$10$Proxy = null;
+    private static final Method CGLIB$setName$11$Method = null;
+    private static final MethodProxy CGLIB$setName$11$Proxy = null;
+    private static final Method CGLIB$getNumber$12$Method = null;
+    private static final MethodProxy CGLIB$getNumber$12$Proxy = null;
+    private static final Method CGLIB$setSex$13$Method = null;
+    private static final MethodProxy CGLIB$setSex$13$Proxy = null;
+    private static final Method CGLIB$setNumber$14$Method = null;
+    private static final MethodProxy CGLIB$setNumber$14$Proxy = null;
+    private static final Method CGLIB$setSalary$15$Method = null;
+    private static final MethodProxy CGLIB$setSalary$15$Proxy = null;
+    private static final Method CGLIB$getSex$16$Method = null;
+    private static final MethodProxy CGLIB$getSex$16$Proxy = null;
+    private static final Method CGLIB$getSalary$17$Method = null;
+    private static final MethodProxy CGLIB$getSalary$17$Proxy = null;
+    private static final Method CGLIB$clone$18$Method = null;
+    private static final MethodProxy CGLIB$clone$18$Proxy = null;
+
+    static void CGLIB$STATICHOOK1() {
+        CGLIB$THREAD_CALLBACKS = new ThreadLocal();
+        CGLIB$emptyArgs = new Object[0];
+        Class<?> cls = Class.forName("com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b");
+        Class<?> cls2 = Class.forName("com.tin.example.cglib.design.pattern.employee.Developer");
+        Method[] findMethods = ReflectUtils.findMethods(new String[]{"equals", "(Ljava/lang/Object;)Z", "toString", "()Ljava/lang/String;", "hashCode", "()I", "accept", "(Lcom/tin/example/cglib/design/pattern/visitor/Visitor;)V", "print", "()Ljava/lang/String;", "setLines", "(J)V", "canEqual", "(Ljava/lang/Object;)Z", "mock", "(J)J", "mock2", "(J)J", "getLines", "()J"}, cls2.getDeclaredMethods());
+        CGLIB$equals$0$Method = findMethods[0];
+        CGLIB$equals$0$Proxy = MethodProxy.create(cls2, cls, "(Ljava/lang/Object;)Z", "equals", "CGLIB$equals$0");
+        CGLIB$toString$1$Method = findMethods[1];
+        CGLIB$toString$1$Proxy = MethodProxy.create(cls2, cls, "()Ljava/lang/String;", "toString", "CGLIB$toString$1");
+        CGLIB$hashCode$2$Method = findMethods[2];
+        CGLIB$hashCode$2$Proxy = MethodProxy.create(cls2, cls, "()I", "hashCode", "CGLIB$hashCode$2");
+        CGLIB$accept$3$Method = findMethods[3];
+        CGLIB$accept$3$Proxy = MethodProxy.create(cls2, cls, "(Lcom/tin/example/cglib/design/pattern/visitor/Visitor;)V", "accept", "CGLIB$accept$3");
+        CGLIB$print$4$Method = findMethods[4];
+        CGLIB$print$4$Proxy = MethodProxy.create(cls2, cls, "()Ljava/lang/String;", "print", "CGLIB$print$4");
+        CGLIB$setLines$5$Method = findMethods[5];
+        CGLIB$setLines$5$Proxy = MethodProxy.create(cls2, cls, "(J)V", "setLines", "CGLIB$setLines$5");
+        CGLIB$canEqual$6$Method = findMethods[6];
+        CGLIB$canEqual$6$Proxy = MethodProxy.create(cls2, cls, "(Ljava/lang/Object;)Z", "canEqual", "CGLIB$canEqual$6");
+        CGLIB$mock$7$Method = findMethods[7];
+        CGLIB$mock$7$Proxy = MethodProxy.create(cls2, cls, "(J)J", "mock", "CGLIB$mock$7");
+        CGLIB$mock2$8$Method = findMethods[8];
+        CGLIB$mock2$8$Proxy = MethodProxy.create(cls2, cls, "(J)J", "mock2", "CGLIB$mock2$8");
+        CGLIB$getLines$9$Method = findMethods[9];
+        CGLIB$getLines$9$Proxy = MethodProxy.create(cls2, cls, "()J", "getLines", "CGLIB$getLines$9");
+        Class<?> cls3 = Class.forName("java.lang.Object");
+        CGLIB$clone$18$Method = ReflectUtils.findMethods(new String[]{"clone", "()Ljava/lang/Object;"}, cls3.getDeclaredMethods())[0];
+        CGLIB$clone$18$Proxy = MethodProxy.create(cls3, cls, "()Ljava/lang/Object;", "clone", "CGLIB$clone$18");
+        Class<?> cls4 = Class.forName("com.tin.example.cglib.design.pattern.employee.Employee");
+        Method[] findMethods2 = ReflectUtils.findMethods(new String[]{"getName", "()Ljava/lang/String;", "setName", "(Ljava/lang/String;)V", "getNumber", "()J", "setSex", "(Lcom/tin/example/cglib/design/pattern/SexEnum;)V", "setNumber", "(J)V", "setSalary", "(Ljava/lang/String;)V", "getSex", "()Lcom/tin/example/cglib/design/pattern/SexEnum;", "getSalary", "()Ljava/lang/String;"}, cls4.getDeclaredMethods());
+        CGLIB$getName$10$Method = findMethods2[0];
+        CGLIB$getName$10$Proxy = MethodProxy.create(cls4, cls, "()Ljava/lang/String;", "getName", "CGLIB$getName$10");
+        CGLIB$setName$11$Method = findMethods2[1];
+        CGLIB$setName$11$Proxy = MethodProxy.create(cls4, cls, "(Ljava/lang/String;)V", "setName", "CGLIB$setName$11");
+        CGLIB$getNumber$12$Method = findMethods2[2];
+        CGLIB$getNumber$12$Proxy = MethodProxy.create(cls4, cls, "()J", "getNumber", "CGLIB$getNumber$12");
+        CGLIB$setSex$13$Method = findMethods2[3];
+        CGLIB$setSex$13$Proxy = MethodProxy.create(cls4, cls, "(Lcom/tin/example/cglib/design/pattern/SexEnum;)V", "setSex", "CGLIB$setSex$13");
+        CGLIB$setNumber$14$Method = findMethods2[4];
+        CGLIB$setNumber$14$Proxy = MethodProxy.create(cls4, cls, "(J)V", "setNumber", "CGLIB$setNumber$14");
+        CGLIB$setSalary$15$Method = findMethods2[5];
+        CGLIB$setSalary$15$Proxy = MethodProxy.create(cls4, cls, "(Ljava/lang/String;)V", "setSalary", "CGLIB$setSalary$15");
+        CGLIB$getSex$16$Method = findMethods2[6];
+        CGLIB$getSex$16$Proxy = MethodProxy.create(cls4, cls, "()Lcom/tin/example/cglib/design/pattern/SexEnum;", "getSex", "CGLIB$getSex$16");
+        CGLIB$getSalary$17$Method = findMethods2[7];
+        CGLIB$getSalary$17$Proxy = MethodProxy.create(cls4, cls, "()Ljava/lang/String;", "getSalary", "CGLIB$getSalary$17");
+    }
+
+    final boolean CGLIB$equals$0(Object obj) {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.equals(obj);
+    }
+
+    public final boolean equals(Object obj) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor == null) {
+            return Developer$$EnhancerByCGLIB$$d571375b.super.equals(obj);
+        }
+        Object intercept = methodInterceptor.intercept(this, CGLIB$equals$0$Method, new Object[]{obj}, CGLIB$equals$0$Proxy);
+        if (intercept == null) {
+            return false;
+        }
+        return ((Boolean) intercept).booleanValue();
+    }
+
+    final String CGLIB$toString$1() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.toString();
+    }
+
+    public final String toString() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? (String) methodInterceptor.intercept(this, CGLIB$toString$1$Method, CGLIB$emptyArgs, CGLIB$toString$1$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.toString();
+    }
+
+    final int CGLIB$hashCode$2() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.hashCode();
+    }
+
+    public final int hashCode() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor == null) {
+            return Developer$$EnhancerByCGLIB$$d571375b.super.hashCode();
+        }
+        Object intercept = methodInterceptor.intercept(this, CGLIB$hashCode$2$Method, CGLIB$emptyArgs, CGLIB$hashCode$2$Proxy);
+        if (intercept == null) {
+            return 0;
+        }
+        return ((Number) intercept).intValue();
+    }
+
+    final void CGLIB$accept$3(Visitor visitor) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.accept(visitor);
+    }
+
+    public final void accept(Visitor visitor) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            methodInterceptor.intercept(this, CGLIB$accept$3$Method, new Object[]{visitor}, CGLIB$accept$3$Proxy);
+        } else {
+            Developer$$EnhancerByCGLIB$$d571375b.super.accept(visitor);
+        }
+    }
+
+    final String CGLIB$print$4() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.print();
+    }
+
+    public final String print() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? (String) methodInterceptor.intercept(this, CGLIB$print$4$Method, CGLIB$emptyArgs, CGLIB$print$4$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.print();
+    }
+
+    final void CGLIB$setLines$5(long j) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.setLines(j);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r7v0, types: [java.lang.Long] */
+    /* JADX WARN: Unknown variable types count: 1 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final void setLines(long r13) {
+        /*
+            r12 = this;
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+            r1 = r0
+            if (r1 != 0) goto L_0x0011
+            r0 = r12
+            CGLIB$BIND_CALLBACKS(r0)
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+        L_0x0011:
+            r1 = r0
+            if (r1 == 0) goto L_0x0033
+            r1 = r12
+            java.lang.reflect.Method r2 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$setLines$5$Method
+            r3 = 1
+            java.lang.Object[] r3 = new java.lang.Object[r3]
+            r4 = r3
+            r5 = 0
+            r6 = r13
+            java.lang.Long r7 = new java.lang.Long
+            r8 = r7; r7 = r6; r6 = r5; r5 = r8;
+            r9 = r8; r8 = r7; r7 = r6; r6 = r9;
+            r7.<init>(r8)
+            r4[r5] = r6
+            net.sf.cglib.proxy.MethodProxy r4 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$setLines$5$Proxy
+            java.lang.Object r0 = r0.intercept(r1, r2, r3, r4)
+            return
+        L_0x0033:
+            r1 = r12
+            r2 = r13
+            com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.super.setLines(r2)
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.setLines(long):void");
+    }
+
+    final boolean CGLIB$canEqual$6(Object obj) {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.canEqual(obj);
+    }
+
+    protected final boolean canEqual(Object obj) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor == null) {
+            return Developer$$EnhancerByCGLIB$$d571375b.super.canEqual(obj);
+        }
+        Object intercept = methodInterceptor.intercept(this, CGLIB$canEqual$6$Method, new Object[]{obj}, CGLIB$canEqual$6$Proxy);
+        if (intercept == null) {
+            return false;
+        }
+        return ((Boolean) intercept).booleanValue();
+    }
+
+    final long CGLIB$mock$7(long j) {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.mock(j);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r7v0, types: [java.lang.Long] */
+    /* JADX WARN: Unknown variable types count: 1 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final long mock(long r13) {
+        /*
+            r12 = this;
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+            r1 = r0
+            if (r1 != 0) goto L_0x0011
+            r0 = r12
+            CGLIB$BIND_CALLBACKS(r0)
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+        L_0x0011:
+            r1 = r0
+            if (r1 == 0) goto L_0x0042
+            r1 = r12
+            java.lang.reflect.Method r2 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$mock$7$Method
+            r3 = 1
+            java.lang.Object[] r3 = new java.lang.Object[r3]
+            r4 = r3
+            r5 = 0
+            r6 = r13
+            java.lang.Long r7 = new java.lang.Long
+            r8 = r7; r7 = r6; r6 = r5; r5 = r8;
+            r9 = r8; r8 = r7; r7 = r6; r6 = r9;
+            r7.<init>(r8)
+            r4[r5] = r6
+            net.sf.cglib.proxy.MethodProxy r4 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$mock$7$Proxy
+            java.lang.Object r0 = r0.intercept(r1, r2, r3, r4)
+            r1 = r0
+            if (r1 != 0) goto L_0x003b
+            r0 = 0
+            goto L_0x0041
+        L_0x003b:
+            java.lang.Number r0 = (java.lang.Number) r0
+            long r0 = r0.longValue()
+        L_0x0041:
+            return r0
+        L_0x0042:
+            r1 = r12
+            r2 = r13
+            long r1 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.super.mock(r2)
+            return r1
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.mock(long):long");
+    }
+
+    final long CGLIB$mock2$8(long j) {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.mock2(j);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r7v0, types: [java.lang.Long] */
+    /* JADX WARN: Unknown variable types count: 1 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final long mock2(long r13) {
+        /*
+            r12 = this;
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+            r1 = r0
+            if (r1 != 0) goto L_0x0011
+            r0 = r12
+            CGLIB$BIND_CALLBACKS(r0)
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+        L_0x0011:
+            r1 = r0
+            if (r1 == 0) goto L_0x0042
+            r1 = r12
+            java.lang.reflect.Method r2 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$mock2$8$Method
+            r3 = 1
+            java.lang.Object[] r3 = new java.lang.Object[r3]
+            r4 = r3
+            r5 = 0
+            r6 = r13
+            java.lang.Long r7 = new java.lang.Long
+            r8 = r7; r7 = r6; r6 = r5; r5 = r8;
+            r9 = r8; r8 = r7; r7 = r6; r6 = r9;
+            r7.<init>(r8)
+            r4[r5] = r6
+            net.sf.cglib.proxy.MethodProxy r4 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$mock2$8$Proxy
+            java.lang.Object r0 = r0.intercept(r1, r2, r3, r4)
+            r1 = r0
+            if (r1 != 0) goto L_0x003b
+            r0 = 0
+            goto L_0x0041
+        L_0x003b:
+            java.lang.Number r0 = (java.lang.Number) r0
+            long r0 = r0.longValue()
+        L_0x0041:
+            return r0
+        L_0x0042:
+            r1 = r12
+            r2 = r13
+            long r1 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.super.mock2(r2)
+            return r1
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.mock2(long):long");
+    }
+
+    final long CGLIB$getLines$9() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.getLines();
+    }
+
+    public final long getLines() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor == null) {
+            return Developer$$EnhancerByCGLIB$$d571375b.super.getLines();
+        }
+        Object intercept = methodInterceptor.intercept(this, CGLIB$getLines$9$Method, CGLIB$emptyArgs, CGLIB$getLines$9$Proxy);
+        if (intercept == null) {
+            return 0;
+        }
+        return ((Number) intercept).longValue();
+    }
+
+    final String CGLIB$getName$10() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.getName();
+    }
+
+    public final String getName() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? (String) methodInterceptor.intercept(this, CGLIB$getName$10$Method, CGLIB$emptyArgs, CGLIB$getName$10$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.getName();
+    }
+
+    final void CGLIB$setName$11(String str) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.setName(str);
+    }
+
+    public final void setName(String str) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            methodInterceptor.intercept(this, CGLIB$setName$11$Method, new Object[]{str}, CGLIB$setName$11$Proxy);
+        } else {
+            Developer$$EnhancerByCGLIB$$d571375b.super.setName(str);
+        }
+    }
+
+    final long CGLIB$getNumber$12() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.getNumber();
+    }
+
+    public final long getNumber() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor == null) {
+            return Developer$$EnhancerByCGLIB$$d571375b.super.getNumber();
+        }
+        Object intercept = methodInterceptor.intercept(this, CGLIB$getNumber$12$Method, CGLIB$emptyArgs, CGLIB$getNumber$12$Proxy);
+        if (intercept == null) {
+            return 0;
+        }
+        return ((Number) intercept).longValue();
+    }
+
+    final void CGLIB$setSex$13(SexEnum sexEnum) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.setSex(sexEnum);
+    }
+
+    public final void setSex(SexEnum sexEnum) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            methodInterceptor.intercept(this, CGLIB$setSex$13$Method, new Object[]{sexEnum}, CGLIB$setSex$13$Proxy);
+        } else {
+            Developer$$EnhancerByCGLIB$$d571375b.super.setSex(sexEnum);
+        }
+    }
+
+    final void CGLIB$setNumber$14(long j) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.setNumber(j);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r7v0, types: [java.lang.Long] */
+    /* JADX WARN: Unknown variable types count: 1 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final void setNumber(long r13) {
+        /*
+            r12 = this;
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+            r1 = r0
+            if (r1 != 0) goto L_0x0011
+            r0 = r12
+            CGLIB$BIND_CALLBACKS(r0)
+            r0 = r12
+            net.sf.cglib.proxy.MethodInterceptor r0 = r0.CGLIB$CALLBACK_0
+        L_0x0011:
+            r1 = r0
+            if (r1 == 0) goto L_0x0033
+            r1 = r12
+            java.lang.reflect.Method r2 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$setNumber$14$Method
+            r3 = 1
+            java.lang.Object[] r3 = new java.lang.Object[r3]
+            r4 = r3
+            r5 = 0
+            r6 = r13
+            java.lang.Long r7 = new java.lang.Long
+            r8 = r7; r7 = r6; r6 = r5; r5 = r8;
+            r9 = r8; r8 = r7; r7 = r6; r6 = r9;
+            r7.<init>(r8)
+            r4[r5] = r6
+            net.sf.cglib.proxy.MethodProxy r4 = com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.CGLIB$setNumber$14$Proxy
+            java.lang.Object r0 = r0.intercept(r1, r2, r3, r4)
+            return
+        L_0x0033:
+            r1 = r12
+            r2 = r13
+            com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.super.setNumber(r2)
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.tin.example.cglib.design.pattern.employee.Developer$$EnhancerByCGLIB$$d571375b.setNumber(long):void");
+    }
+
+    final void CGLIB$setSalary$15(String str) {
+        Developer$$EnhancerByCGLIB$$d571375b.super.setSalary(str);
+    }
+
+    public final void setSalary(String str) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            methodInterceptor.intercept(this, CGLIB$setSalary$15$Method, new Object[]{str}, CGLIB$setSalary$15$Proxy);
+        } else {
+            Developer$$EnhancerByCGLIB$$d571375b.super.setSalary(str);
+        }
+    }
+
+    final SexEnum CGLIB$getSex$16() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.getSex();
+    }
+
+    public final SexEnum getSex() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? (SexEnum) methodInterceptor.intercept(this, CGLIB$getSex$16$Method, CGLIB$emptyArgs, CGLIB$getSex$16$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.getSex();
+    }
+
+    final String CGLIB$getSalary$17() {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.getSalary();
+    }
+
+    public final String getSalary() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? (String) methodInterceptor.intercept(this, CGLIB$getSalary$17$Method, CGLIB$emptyArgs, CGLIB$getSalary$17$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.getSalary();
+    }
+
+    final Object CGLIB$clone$18() throws CloneNotSupportedException {
+        return Developer$$EnhancerByCGLIB$$d571375b.super.clone();
+    }
+
+    protected final Object clone() throws CloneNotSupportedException {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        return methodInterceptor != null ? methodInterceptor.intercept(this, CGLIB$clone$18$Method, CGLIB$emptyArgs, CGLIB$clone$18$Proxy) : Developer$$EnhancerByCGLIB$$d571375b.super.clone();
+    }
+
+    public static MethodProxy CGLIB$findMethodProxy(Signature signature) {
+        String obj = signature.toString();
+        switch (obj.hashCode()) {
+            case -1937422157:
+                if (obj.equals("setSalary(Ljava/lang/String;)V")) {
+                    return CGLIB$setSalary$15$Proxy;
+                }
+                return null;
+            case -1184972270:
+                if (obj.equals("setName(Ljava/lang/String;)V")) {
+                    return CGLIB$setName$11$Proxy;
+                }
+                return null;
+            case -1027558016:
+                if (obj.equals("getLines()J")) {
+                    return CGLIB$getLines$9$Proxy;
+                }
+                return null;
+            case -644174227:
+                if (obj.equals("mock(J)J")) {
+                    return CGLIB$mock$7$Proxy;
+                }
+                return null;
+            case -508378822:
+                if (obj.equals("clone()Ljava/lang/Object;")) {
+                    return CGLIB$clone$18$Proxy;
+                }
+                return null;
+            case -240504020:
+                if (obj.equals("setLines(J)V")) {
+                    return CGLIB$setLines$5$Proxy;
+                }
+                return null;
+            case -13922168:
+                if (obj.equals("accept(Lcom/tin/example/cglib/design/pattern/visitor/Visitor;)V")) {
+                    return CGLIB$accept$3$Proxy;
+                }
+                return null;
+            case 82861754:
+                if (obj.equals("setNumber(J)V")) {
+                    return CGLIB$setNumber$14$Proxy;
+                }
+                return null;
+            case 121052811:
+                if (obj.equals("getSalary()Ljava/lang/String;")) {
+                    return CGLIB$getSalary$17$Proxy;
+                }
+                return null;
+            case 437408081:
+                if (obj.equals("canEqual(Ljava/lang/Object;)Z")) {
+                    return CGLIB$canEqual$6$Proxy;
+                }
+                return null;
+            case 1218144844:
+                if (obj.equals("getName()Ljava/lang/String;")) {
+                    return CGLIB$getName$10$Proxy;
+                }
+                return null;
+            case 1513688523:
+                if (obj.equals("mock2(J)J")) {
+                    return CGLIB$mock2$8$Proxy;
+                }
+                return null;
+            case 1640267978:
+                if (obj.equals("getNumber()J")) {
+                    return CGLIB$getNumber$12$Proxy;
+                }
+                return null;
+            case 1826985398:
+                if (obj.equals("equals(Ljava/lang/Object;)Z")) {
+                    return CGLIB$equals$0$Proxy;
+                }
+                return null;
+            case 1913648695:
+                if (obj.equals("toString()Ljava/lang/String;")) {
+                    return CGLIB$toString$1$Proxy;
+                }
+                return null;
+            case 1925164024:
+                if (obj.equals("print()Ljava/lang/String;")) {
+                    return CGLIB$print$4$Proxy;
+                }
+                return null;
+            case 1984935277:
+                if (obj.equals("hashCode()I")) {
+                    return CGLIB$hashCode$2$Proxy;
+                }
+                return null;
+            case 2018585714:
+                if (obj.equals("setSex(Lcom/tin/example/cglib/design/pattern/SexEnum;)V")) {
+                    return CGLIB$setSex$13$Proxy;
+                }
+                return null;
+            case 2117258194:
+                if (obj.equals("getSex()Lcom/tin/example/cglib/design/pattern/SexEnum;")) {
+                    return CGLIB$getSex$16$Proxy;
+                }
+                return null;
+            default:
+                return null;
+        }
+    }
+
+    public Developer$$EnhancerByCGLIB$$d571375b() {
+        CGLIB$BIND_CALLBACKS(this);
+    }
+
+    public Developer$$EnhancerByCGLIB$$d571375b(Developer developer) {
+        super(developer);
+        CGLIB$BIND_CALLBACKS(this);
+    }
+
+    public static void CGLIB$SET_THREAD_CALLBACKS(Callback[] callbackArr) {
+        CGLIB$THREAD_CALLBACKS.set(callbackArr);
+    }
+
+    public static void CGLIB$SET_STATIC_CALLBACKS(Callback[] callbackArr) {
+        CGLIB$STATIC_CALLBACKS = callbackArr;
+    }
+
+    private static final void CGLIB$BIND_CALLBACKS(Object obj) {
+        Developer$$EnhancerByCGLIB$$d571375b developer$$EnhancerByCGLIB$$d571375b = (Developer$$EnhancerByCGLIB$$d571375b) obj;
+        if (!developer$$EnhancerByCGLIB$$d571375b.CGLIB$BOUND) {
+            developer$$EnhancerByCGLIB$$d571375b.CGLIB$BOUND = true;
+            Object obj2 = CGLIB$THREAD_CALLBACKS.get();
+            if (obj2 == null) {
+                obj2 = CGLIB$STATIC_CALLBACKS;
+                if (obj2 == null) {
+                    return;
+                }
+            }
+            developer$$EnhancerByCGLIB$$d571375b.CGLIB$CALLBACK_0 = ((Callback[]) obj2)[0];
+        }
+    }
+
+    public Object newInstance(Callback[] callbackArr) {
+        CGLIB$SET_THREAD_CALLBACKS(callbackArr);
+        Developer$$EnhancerByCGLIB$$d571375b developer$$EnhancerByCGLIB$$d571375b = new Developer$$EnhancerByCGLIB$$d571375b();
+        CGLIB$SET_THREAD_CALLBACKS(null);
+        return developer$$EnhancerByCGLIB$$d571375b;
+    }
+
+    public Object newInstance(Callback callback) {
+        CGLIB$SET_THREAD_CALLBACKS(new Callback[]{callback});
+        Developer$$EnhancerByCGLIB$$d571375b developer$$EnhancerByCGLIB$$d571375b = new Developer$$EnhancerByCGLIB$$d571375b();
+        CGLIB$SET_THREAD_CALLBACKS(null);
+        return developer$$EnhancerByCGLIB$$d571375b;
+    }
+
+    public Object newInstance(Class[] clsArr, Object[] objArr, Callback[] callbackArr) {
+        Developer$$EnhancerByCGLIB$$d571375b developer$$EnhancerByCGLIB$$d571375b;
+        CGLIB$SET_THREAD_CALLBACKS(callbackArr);
+        switch (clsArr.length) {
+            case 0:
+                developer$$EnhancerByCGLIB$$d571375b = new Developer$$EnhancerByCGLIB$$d571375b();
+                CGLIB$SET_THREAD_CALLBACKS(null);
+                return developer$$EnhancerByCGLIB$$d571375b;
+            case 1:
+                if (clsArr[0].getName().equals("com.tin.example.cglib.design.pattern.employee.Developer")) {
+                    developer$$EnhancerByCGLIB$$d571375b = new Developer$$EnhancerByCGLIB$$d571375b((Developer) objArr[0]);
+                    CGLIB$SET_THREAD_CALLBACKS(null);
+                    return developer$$EnhancerByCGLIB$$d571375b;
+                }
+                throw new IllegalArgumentException("Constructor not found");
+            default:
+                throw new IllegalArgumentException("Constructor not found");
+        }
+    }
+
+    public Callback getCallback(int i) {
+        CGLIB$BIND_CALLBACKS(this);
+        switch (i) {
+            case 0:
+                return this.CGLIB$CALLBACK_0;
+            default:
+                return null;
+        }
+    }
+
+    public void setCallback(int i, Callback callback) {
+        switch (i) {
+            case 0:
+                this.CGLIB$CALLBACK_0 = (MethodInterceptor) callback;
+                return;
+            default:
+                return;
+        }
+    }
+
+    public Callback[] getCallbacks() {
+        CGLIB$BIND_CALLBACKS(this);
+        return new Callback[]{this.CGLIB$CALLBACK_0};
+    }
+
+    public void setCallbacks(Callback[] callbackArr) {
+        this.CGLIB$CALLBACK_0 = (MethodInterceptor) callbackArr[0];
+    }
+
+    static {
+        CGLIB$STATICHOOK1();
+    }
+}
