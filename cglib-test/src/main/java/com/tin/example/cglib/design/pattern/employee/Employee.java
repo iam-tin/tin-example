@@ -41,7 +41,7 @@ public abstract class Employee {
     }
 
     public String print() {
-        return "姓名：" + name + "，性别：" + sex + "，月薪：" + salary;
+        return printSelf();
     }
 
     /**
@@ -49,9 +49,12 @@ public abstract class Employee {
      */
     public abstract void accept(Visitor visitor);
 
-
-    private long mock(long lines) {
-        System.out.println("mock 代码行数2:" + lines);
-        return lines;
+    /**
+     * 私有方法
+     *
+     * @return
+     */
+    private String printSelf() {
+        return "姓名：" + name + "，性别：" + sex + "，月薪：" + salary;
     }
 }

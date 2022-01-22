@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author tin @公众号【看点代码再上班】 on 2022/1/15 上午11:43
  */
-public class MainClass {
+public class VisitorPatternTest {
 
     public static void main(String[] args) {
         List<Employee> allEmployee = EmployeeManager.getAllEmployee();
