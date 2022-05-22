@@ -21,8 +21,8 @@ import java.util.concurrent.CountDownLatch;
  */
 @SpringBootApplication
 @Slf4j
-public class Application {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+public class ConsumerApplication {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerApplication.class);
     private static JsonMapper jsonMapper = new JsonMapper();
 
     public static void main(String[] args) throws InterruptedException {

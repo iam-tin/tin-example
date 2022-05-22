@@ -15,8 +15,8 @@ import java.util.concurrent.CountDownLatch;
  * @author tin @看点代码再上班 on 2022/2/27 下午2:08
  */
 @SpringBootApplication
-public class Application {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+public class ProviderApplication {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProviderApplication.class);
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(1);
